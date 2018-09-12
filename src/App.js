@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import DataTable from "./components/DataTable";
+import PrimaryButton from "./components/buttons/PrimaryButton";
 
 class App extends Component {
   render() {
@@ -16,6 +17,10 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <DataTable />
+        <PrimaryButton
+          text="foo"
+          onClick={() => console.log("primary button clicked.")}
+        />
       </div>
     );
   }
