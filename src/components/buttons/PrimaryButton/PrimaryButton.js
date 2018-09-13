@@ -1,5 +1,11 @@
+// @flow
 import React from "react";
 import styled from "react-emotion";
+
+type Props = {
+  text: string,
+  onClick: Function
+};
 
 const Button = styled("button")`
   background-color: #1e88e5;
@@ -16,7 +22,7 @@ const Button = styled("button")`
   user-select: none;
 `;
 
-const PrimaryButton = ({ text, onClick }) => (
+const PrimaryButton = ({ text, onClick }: Props) => (
   <Button onClick={onClick}>{text}</Button>
 );
 
