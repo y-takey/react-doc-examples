@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@handsontable/react": "^1.1.0",
+    "antd": "^3.9.2",
     "emotion": "^9.2.8",
     "flow-bin": "^0.80.0",
     "handsontable": "^5.0.1",
