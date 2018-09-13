@@ -1,24 +1,35 @@
 // @flow
 import * as React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import styled from "react-emotion";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Layout from "antd/lib/layout";
 
 import Home from "./pages/Home";
 import Ground from "./pages/Ground";
+import LinkButton from "./components/buttons/LinkButton";
 import "./App.css";
+
+const Menu = styled("ul")`
+  list-style-type: none;
+  padding: 20px;
+
+  li {
+    margin-bottom: 20px;
+  }
+`;
 
 const App = () => (
   <Router>
     <Layout style={{ minHeight: "100vh" }}>
       <Layout.Sider theme="light">
-        <ul>
+        <Menu>
           <li>
-            <Link to="/">Home</Link>
+            <LinkButton text="Home" path="/" />
           </li>
           <li>
-            <Link to="/ground">Ground</Link>
+            <LinkButton text="Ground" path="/ground" />
           </li>
-        </ul>
+        </Menu>
       </Layout.Sider>
       <Layout>
         <Layout.Content style={{ margin: "24px 16px 0" }}>
