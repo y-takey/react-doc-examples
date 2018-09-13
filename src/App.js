@@ -1,29 +1,28 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+// @flow
+import * as React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import DataTable from "./components/DataTable";
-import PrimaryButton from "./components/buttons/PrimaryButton";
+import Home from "./pages/Home";
+import Ground from "./pages/Ground";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <header className="App App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <DataTable />
-        <PrimaryButton
-          text="foo"
-          onClick={() => console.log("primary button clicked.")}
-        />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/ground">Ground</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route path="/ground" component={Ground} />
+    </div>
+  </Router>
+);
 
 export default App;
