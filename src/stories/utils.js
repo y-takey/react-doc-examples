@@ -2,6 +2,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import { withKnobs } from "@storybook/addon-knobs";
 // import { withState } from "@dump247/storybook-state";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -13,7 +14,9 @@ const stories = {};
 
 const getStory = category => {
   if (!stories[category])
-    stories[category] = storiesOf(category, module).addDecorator(Decorator);
+    stories[category] = storiesOf(category, module)
+      .addDecorator(Decorator)
+      .addDecorator(withKnobs);
   return stories[category];
 };
 

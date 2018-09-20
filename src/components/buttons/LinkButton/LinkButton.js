@@ -4,7 +4,9 @@ import Button from "antd/lib/button";
 import { Link } from "react-router-dom";
 
 type Props = {
+  /** ボタンの文字列 */
   text: string,
+  /** リンク先のpath */
   path: string
 };
 
