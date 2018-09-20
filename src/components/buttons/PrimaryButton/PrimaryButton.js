@@ -1,29 +1,18 @@
 // @flow
 import React from "react";
-import styled from "react-emotion";
+import Button from "antd/lib/button";
 
 type Props = {
   text: string,
+  block?: boolean,
+  icon?: "plus" | "edit" | "search",
   onClick: Function
 };
 
-const Button = styled("button")`
-  background-color: #1e88e5;
-  border-color: #1e88e5;
-  border-radius: 0.75em;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.5em;
-  outline: 0;
-  padding: 0px 10px;
-  user-select: none;
-`;
-
-const PrimaryButton = ({ text, onClick }: Props) => (
-  <Button onClick={onClick}>{text}</Button>
+const PrimaryButton = ({ text, block = false, icon, onClick }: Props) => (
+  <Button type="primary" block={block} icon={icon} onClick={onClick}>
+    {text}
+  </Button>
 );
 
 export default PrimaryButton;

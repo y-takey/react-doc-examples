@@ -14,6 +14,7 @@
     "react-emotion": "^9.2.8",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
+    "react-styleguidist": "^7.3.8",
     "recompose": "^0.30.0"
   },
   "scripts": {
@@ -23,7 +24,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook:build": "build-storybook -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",

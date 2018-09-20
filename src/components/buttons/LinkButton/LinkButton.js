@@ -10,10 +10,10 @@ type Props = {
   path: string
 };
 
-const PrimaryButton = ({ text, path }: Props) => (
+const LinkButton = ({ text, path }: Props) => (
   <Button type="primary" ghost>
     <Link to={path}>{text}</Link>
   </Button>
 );
 
-export default PrimaryButton;
+export default LinkButton;
