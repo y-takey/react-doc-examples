@@ -28,7 +28,9 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:build": "docz build",
+    "rdw:dev": "rdw serve src/components/buttons/PrimaryButton/rdw.mdx",
+    "rdw:build": "rdw build src/components/buttons/PrimaryButton/rdw.mdx --out-dir docs/"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
@@ -40,6 +42,7 @@
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "docz": "^0.11.2"
+    "docz": "^0.11.2",
+    "react-display-window": "^2.0.0"
   }
 }
