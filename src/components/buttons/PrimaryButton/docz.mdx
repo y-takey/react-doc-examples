@@ -1,0 +1,32 @@
+---
+name: PrimaryButton
+menu: button
+---
+
+import { Playground, PropsTable } from "docz";
+import PrimaryButton from './index'
+
+# Primary　Button
+
+普通のボタン
+
+
+<PropsTable of={PrimaryButton} />
+
+### ノーマル
+
+<Playground>
+  <PrimaryButton text="foo" onClick={() => console.log("clicked")} />
+</Playground>
+
+#### アイコン付き
+
+<Playground>
+  <PrimaryButton text="with icon" icon="edit" onClick={() => console.log("clicked-2")} />
+</Playground>
+
+### ブロックボタン
+
+<Playground>
+  <PrimaryButton text="block" block onClick={() => console.log("clicked-3")} />
+</Playground>

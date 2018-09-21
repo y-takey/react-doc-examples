@@ -1,0 +1,63 @@
+{
+  "config": {
+    "title": "React Doc Examples",
+    "description": "My awesome app using docz",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "wrapper": "src/docz/Wrapper"
+  },
+  "entries": {
+    "src/components/buttons/LinkButton/docz.mdx": {
+      "name": "LinkButton",
+      "id": "8801b1c4617f5d5eaf21f43a888b52b8",
+      "filepath": "src/components/buttons/LinkButton/docz.mdx",
+      "link": null,
+      "slug": "src-components-buttons-link-button-docz",
+      "route": "/src-components-buttons-link-button-docz",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "link-button",
+          "value": "Link Button"
+        }
+      ]
+    },
+    "src/components/buttons/PrimaryButton/docz.mdx": {
+      "name": "PrimaryButton",
+      "id": "e1e02dc5a6a44792b79e6d8742775ec0",
+      "filepath": "src/components/buttons/PrimaryButton/docz.mdx",
+      "link": null,
+      "slug": "src-components-buttons-primary-button-docz",
+      "route": "/src-components-buttons-primary-button-docz",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "primary-button",
+          "value": "Primary　Button"
+        },
+        {
+          "depth": 3,
+          "slug": "ノーマル",
+          "value": "ノーマル"
+        },
+        {
+          "depth": 4,
+          "slug": "アイコン付き",
+          "value": "アイコン付き"
+        },
+        {
+          "depth": 3,
+          "slug": "ブロックボタン",
+          "value": "ブロックボタン"
+        }
+      ]
+    }
+  }
+}
