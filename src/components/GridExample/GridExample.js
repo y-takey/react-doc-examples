@@ -90,56 +90,19 @@ const WeekdayItem = styled("div")`
 
 const WeekdaysHeader = () => (
   <React.Fragment>
-    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(weekday => {
-      return <WeekdayItem>{weekday}</WeekdayItem>;
-    })}
+    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(weekday => (
+      <WeekdayItem key={weekday}>{weekday}</WeekdayItem>
+    ))}
   </React.Fragment>
 );
 
-const days = [
-  null,
-  null,
-  null,
-  null,
-  null,
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
-  "19",
-  "20",
-  "21",
-  "22",
-  "23",
-  "24",
-  "25",
-  "26",
-  "27",
-  "28",
-  "29",
-  "30",
-  "31",
-  null,
-  null,
-  null,
-  null,
-  null,
-  null
-];
+const week1 = [null, null, null, null, null, "1", "2"];
+const week2 = ["3", "4", "5", "6", "7", "8", "9"];
+const week3 = ["10", "11", "12", "13", "14", "15", "16"];
+const week4 = ["17", "18", "19", "20", "21", "22", "23"];
+const week5 = ["24", "25", "26", "27", "28", "29", "30"];
+const week6 = ["31", null, null, null, null, null, null];
+const days = [...week1, ...week2, ...week3, ...week4, ...week5, ...week6];
 
 const DayItem = styled("div")`
   text-align: center;
@@ -149,30 +112,32 @@ const DayItem = styled("div")`
   font-size: 1em;
   width: 3em;
   border-radius: 50%;
+  color: ${({ color }) => color.fr};
+  background-color: ${({ color }) => color.bg};
 `;
 
-const Day = ({ date }) => {
+const colors = {
+  sat: { fr: "#ffffff", bg: "#1E88E5" },
+  sun: { fr: "#ffffff", bg: "#F4511E" },
+};
+
+const Day = ({ date, weekday }) => {
   if (!date) return null;
 
-  // <DayItem fontColor={getFontColor(date)} bgColor={getBgColor(date)}>
-  return <DayItem>{date}</DayItem>;
+  const color = weekday === 0 ? colors.sun : weekday === 6 ? colors.sat : {};
+
+  return <DayItem color={color}>{date}</DayItem>;
 };
 
 const Days = () => (
   <React.Fragment>
-    {days.map((date, i) => {
-      return (
-        <div key={i}>
-          <Day date={date} />
-        </div>
-      );
-    })}
+    {days.map((date, i) => (
+      <div key={i}>
+        <Day date={date} weekday={i % 7} />
+      </div>
+    ))}
   </React.Fragment>
 );
-
-// const Area = styled("div")`
-//   grid-column: ${props => props.area};
-// `;
 
 const GridExample = () => (
   <GridLayout>
