@@ -5,9 +5,10 @@ import * as React from "react";
 import BasicGrid from "./BasicGrid";
 import CardGrid from "./CardGrid";
 import CalendarGrid from "./CalendarGrid";
+import ScheduleGrid from "./ScheduleGrid";
 
 const GridExample = () => (
-  <div>
+  <div style={{ padding: 32 }}>
     <hr />
     <h3>Basic</h3>
     <BasicGrid />
@@ -17,6 +18,9 @@ const GridExample = () => (
     <hr />
     <h3>Calendar</h3>
     <CalendarGrid />
+    <hr />
+    <h3>Schedule</h3>
+    <ScheduleGrid />
   </div>
 );
 
