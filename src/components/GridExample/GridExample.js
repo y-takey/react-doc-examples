@@ -6,6 +6,7 @@ import BasicGrid from "./BasicGrid";
 import CardGrid from "./CardGrid";
 import CalendarGrid from "./CalendarGrid";
 import ScheduleGrid from "./ScheduleGrid";
+import CalculatorGrid from "./CalculatorGrid";
 
 const GridExample = () => (
   <div style={{ padding: 32 }}>
@@ -21,6 +22,9 @@ const GridExample = () => (
     <hr />
     <h3>Schedule</h3>
     <ScheduleGrid />
+    <hr />
+    <h3>Calculator</h3>
+    <CalculatorGrid />
   </div>
 );
 
