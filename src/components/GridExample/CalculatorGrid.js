@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "react-emotion";
 
 // Calculator pattern 5
-// / 60px 60px 60px 60px
 const template = `
   "ii ii ii ii"
   "ac pm pc di"
@@ -19,22 +18,7 @@ const GridLayout = styled("div")`
 `;
 
 const Area = styled("div")`
-  grid-column: ${props => props.area};
-`;
-
-// height: 100vh;
-const Container = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center
-  font-family: "Quicksand", sans-serif;
-
-  background: linear-gradient(
-    90deg,
-    rgba(100, 130, 200, 1) 0%,
-    rgba(162, 165, 194, 1) 100%
-  );
+  grid-area: ${props => props.area};
 `;
 
 const Calculator = styled("div")`
@@ -58,20 +42,19 @@ const Input = styled("input")`
 `;
 
 const Button = styled("div")`
-  align-self: center;
-  text-align: center;
-  width: 100%;
   background: ${({ color }) => (color === "blue" ? "#1E88E5" : "#757575")};
   border-radius: 22px;
-  min-width: 50px;
-  height: 50px;
-  display: flex;
-  font-weight: bold;
   color: white;
-  font-size: 1.2em;
-  line-height: 1em;
   cursor: pointer;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  min-width: 50px;
+  text-align: center;
   user-select: none;
+  width: 100%;
   :active {
     transition: transform 0.2s, box-shadow 0.2s;
     transform: translateY(1px);
@@ -105,8 +88,6 @@ const Operators = () =>
     </Area>
   ));
 
-// <Container>
-// </Container>
 const GridExample = () => (
   <Calculator>
     <GridLayout>
